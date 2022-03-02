@@ -4,25 +4,123 @@
   box-sizing: border-box;
 }
 
+:root {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  --sidebar-bg-color: #151d3b;
+  --header-bg-color: #6ebf8b;
+  --main-bg-color: #dadbbd;
+  --title-color: #ddd;
+}
+
 body {
   display: grid;
   grid-template: 100px 1fr / 150px 1fr;
   width: 100vw;
   height: 100vh;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  color: var(--title-color);
+  background-color: var(--main-bg-color);
 }
 
 .sidebar {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
+
+  background-color: var(--sidebar-bg-color);
+}
+
+.sidebar h2 {
+  color: var(--header-bg-color);
+}
+
+.sidebar img {
+  filter: invert(76%) sepia(12%) saturate(1241%) hue-rotate(89deg) brightness(89%) contrast(88%);
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: var(--header-bg-color);
 }
 
 .header {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+
+  background-color: var(--header-bg-color);
+}
+
+.header input {
+  background-color: var(--main-bg-color);
+}
+
+.header button {
+  background-color: var(--sidebar-bg-color);
+  color: var(--header-bg-color);
 }
 
 .main {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+
+  background-color: var(--main-bg-color);
+}
+
+.main h2 {
+  color: white;
+}
+
+.main p {
+  color: var(--main-bg-color);
+}
+
+.projects li {
+  background-color: var(--header-bg-color);
+  border-left: 5px solid #73b2d9;
+}
+
+.projects img {
+  filter: invert(98%) sepia(0%) saturate(145%) hue-rotate(150deg) brightness(91%) contrast(93%);
+}
+
+.announcements {
+  background-color: var(--header-bg-color);
+}
+
+.trending {
+  background-color: var(--header-bg-color);
+}
+
+.pfp {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.user-image {
+  background-image: url("./img/star-platinum-the-world.jpg");
+  background-position: -155px -90px;
+  background-size: 270px;
+}
+
+.sponge-image {
+  background-image: url("./img/funny-guy.jpg");
+  background-position: -37px -1px;
+  background-size: 135px;
+}
+
+.fish-image {
+  background-image: url("./img/best-fish.jpg");
+  background-position: -135px -30px;
+  background-size: 250px;
+}
+
+.hair-image {
+  background-image: url("./img/adam.png");
+  background-position: -69px -21px;
+  background-size: 200px;
+}
+
+.squid-image {
+  background-image: url("./img/squid-man.jpg");
+  background-position: -55px -13px;
+  background-size: 185px;
 }
