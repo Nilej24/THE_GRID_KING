@@ -6,10 +6,10 @@
 
 :root {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-  --sidebar-bg-color: #151d3b;
-  --header-bg-color: #6ebf8b;
-  --main-bg-color: #dadbbd;
-  --title-color: #ddd;
+  --sidebar-bg-color: #313552;
+  --header-bg-color: #2eb086;
+  --main-bg-color: #eee6ce;
+  --title-color: white;
 }
 
 body {
@@ -65,7 +65,7 @@ body {
 }
 
 .main h2 {
-  color: white;
+  color: black;
 }
 
 .main p {
@@ -74,11 +74,11 @@ body {
 
 .projects li {
   background-color: var(--header-bg-color);
-  border-left: 5px solid #73b2d9;
+  border-left: 5px solid #b8405e;
 }
 
 .projects img {
-  filter: invert(98%) sepia(0%) saturate(145%) hue-rotate(150deg) brightness(91%) contrast(93%);
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(326deg) brightness(106%) contrast(101%);
 }
 
 .announcements {
