@@ -234,6 +234,7 @@ body {
   background-color: var(--header-bg-color);
   border-left: 10px solid #b8405e;
   border-radius: 10px;
+  box-shadow: grey 0 3px 5px;
 }
 
 .projects li div {
@@ -252,6 +253,7 @@ body {
   list-style: none;
   padding: 25px;
   border-radius: 10px;
+  box-shadow: grey 0 3px 5px;
 }
 
 .announcements h3 {
@@ -278,6 +280,7 @@ body {
 
   background-color: var(--header-bg-color);
   list-style: none;
+  box-shadow: grey 0 3px 5px;
 }
 
 .trending li {
