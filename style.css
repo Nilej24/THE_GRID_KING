@@ -22,7 +22,8 @@
 
 body {
   display: grid;
-  grid-template: 200px 1fr / 300px 1fr;
+  grid-template-rows: minmax(200px, min-content) 1fr;
+  grid-template-columns: 300px 1fr;
 
   color: var(--title-color);
   background-color: var(--main-bg-color);
@@ -34,6 +35,8 @@ body {
 
   height: 100vh;
   padding: 20px;
+  position: sticky;
+  top: 0;
 
   background-color: var(--sidebar-bg-color);
   z-index: 2;
@@ -185,12 +188,17 @@ body {
 .main {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  display: grid;
+  grid-template: min-content 1fr / 1fr 300px;
+  gap: 25px;
+  padding: 25px;
 
   background-color: var(--main-bg-color);
 }
 
 .main h2 {
   color: black;
+  margin-bottom: 10px;
 }
 
 .main h2,
@@ -205,17 +213,78 @@ body {
   font-weight: var(--paragraph-font-weight);
 }
 
+.projects {
+  grid-row: 1 / 3;
+}
+
+.projects ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+
+  list-style: none;
+}
+
 .projects li {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+
   background-color: var(--header-bg-color);
-  border-left: 5px solid #b8405e;
+  border-left: 10px solid #b8405e;
+  border-radius: 10px;
 }
 
-.announcements {
-  background-color: var(--header-bg-color);
+.projects li div {
+  margin-top: auto;
+  align-self: end;
 }
 
-.trending {
+.projects li .buttons {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+
+.announcements ul {
   background-color: var(--header-bg-color);
+  list-style: none;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.announcements h3 {
+  font-size: var(--paragraph-font-size);
+}
+
+.announcements p {
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  margin-top: 3px;
+}
+
+.announcements li + li {
+  border-top: 1px solid var(--main-bg-color);
+  padding-top: 10px;
+}
+
+.trending ul {
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  background-color: var(--header-bg-color);
+  list-style: none;
+}
+
+.trending li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
 }
 
 .trending h3 {
@@ -224,6 +293,15 @@ body {
 }
 
 .pfp {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user-title-image {
+  background-image: url("./img/star-platinum-the-world.jpg");
+  background-position: -155px -90px;
+  background-size: 270px;
   width: 75px;
   height: 75px;
   border-radius: 50%;
@@ -231,7 +309,7 @@ body {
 
 .user-image {
   background-image: url("./img/star-platinum-the-world.jpg");
-  background-position: -155px -90px;
+  background-position: -177px -105px;
   background-size: 270px;
 }
 
@@ -243,7 +321,7 @@ body {
 
 .fish-image {
   background-image: url("./img/best-fish.jpg");
-  background-position: -135px -30px;
+  background-position: -140px -41px;
   background-size: 250px;
 }
 
@@ -255,6 +333,6 @@ body {
 
 .squid-image {
   background-image: url("./img/squid-man.jpg");
-  background-position: -55px -13px;
+  background-position: -68px -28px;
   background-size: 185px;
 }
